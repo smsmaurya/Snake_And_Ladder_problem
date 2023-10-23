@@ -1,14 +1,16 @@
 package com.bridgeLabz;
 
-public class ReachExactWinningPositionUC5 {
+public class CountRollsDiceUC6 {
     public static void main(String[] args) {
         int playerPosition = 0;
         int notPlay = 0;
         int useLadder = 1;
         int snakeBites = 2;
+        int count = 0;
         while(playerPosition<100){
             int option = (int) (Math.random()*10)%3;
             int dice = (int)(Math.random()*10)%6 +1;
+            count++;
 
             if(option==notPlay){
                 System.out.println("Player stays at same position "+ playerPosition);
@@ -31,5 +33,7 @@ public class ReachExactWinningPositionUC5 {
                 }
             }
         }
+        System.out.println("In the snake ladder game "+count+" times dice rolls and player position is "+playerPosition+".");
     }
+
 }
